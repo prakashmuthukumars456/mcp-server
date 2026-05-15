@@ -1,0 +1,65 @@
+{
+  "mcpServers": {
+    "weather": {
+      "command": "C:\\Personal_Projects\\mcp-servers\\venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\Personal_Projects\\mcp-servers\\weather-server.py"
+      ]
+    },
+    "ado": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@azure-devops/mcp",
+        "NAF-Tech",
+        "-d",
+        "core",
+        "work",
+        "work-items"
+      ],
+      "env": {
+        "AZURE_DEVOPS_TOKEN": "Cuo2qzFVgoUAg0uhKjrAASAZDOQfx4"
+      }
+    },
+    "newrelic-local": {
+      "type": "stdio",
+      "command": "C:\\Program Files\\nodejs\\node.exe",
+      "args": [
+        "c:\\Users\\Prakash.M\\Downloads\\nr-mcp\\nr-mcp\\nr-mcp-server\\build\\index.js"
+      ],
+      "env": {
+        "NEW_RELIC_API_KEY": "NRAK-",
+        "NEW_RELIC_ACCOUNT_ID": "4500785",
+        "NEW_RELIC_REGION": "US"
+      }
+    },
+    "newrelic-hosted": {
+      "type": "http",
+      "url": "https://mcp.newrelic.com/mcp/v1",
+      "headers": {
+        "api-key": "NRAK-",
+        "x-account-id": "4500785",
+        "x-region": "US"
+      },
+      "transport": "sse"
+    }
+  },
+  "preferences": {
+    "coworkScheduledTasksEnabled": true,
+    "ccdScheduledTasksEnabled": true,
+    "sidebarMode": "epitaxy",
+    "coworkWebSearchEnabled": true,
+    "remoteToolsDeviceName": "lt-ind-6kkissav",
+    "epitaxyPrefs": {
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "customGroupAssignments": {},
+        "customGroupOrder": {}
+      }
+    }
+  }
+}
